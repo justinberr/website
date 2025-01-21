@@ -3,10 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Justin</title>
+    <title>My Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .cta-button {
+            margin-top: 6px;
+            float: right;
+            margin-right: 10px;
+            background-color: #6c757d;
+            color: white !important;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            border-radius: 5px;
+            text-decoration: none;
+            border: 2px solid red;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #5a6268;
+        }
+        h1, h2 {
+            margin-top: 20px;
+        }
+        .project-card {
+    perspective: 1000px; /* Enable 3D perspective for the whole card */
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out, box-shadow 0.3s ease-out; /* Smooth tilt and shadow */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Default shadow */
+}
+
+.project-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Highlight shadow on hover */
+}
+
+.card-body {
+    backface-visibility: hidden; /* Prevent text or content flipping artifacts */
+}
+
+
+
+        .form-card {
+            margin-top: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .card-container {
+            perspective: 1000px;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    
-    <p>Am I published?</p>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="files/Lebenslauf.pdf" target="_blank">Lebenslauf <span style="font-size: 0.8em;">(im neuen Tab öffnen)</span></a>
+        <a href="#contact" class="cta-button">Contact Us</a>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Herzlich Willkommen</h1>
+
+        <!-- Project List -->
+        <section>
+            <h2 class="mt-4">Meine Projekte</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card project-card card-container">
+                        <div class="card-body">
+                            <h5 class="card-title">Interaktive JavaScript-Würfel</h5>
+                            <p class="card-text">
+                                Dieses Projekt verwendet <strong>Three.js</strong>, eine leistungsstarke JavaScript-Bibliothek zur Erstellung von 3D-Objekten, um die Darstellung und Steuerung mehrerer Würfel in einer interaktiven Umgebung zu ermöglichen. Benutzer können Parameter wie Anzahl, Richtung und Rotationsgeschwindigkeit der Würfel flexibel anpassen.
+                            </p>
+            
+                            <h3>Features:</h3>
+                            <ul>
+                                <li><strong>Erstellung mehrerer Würfel</strong>: Wähle die Anzahl der Würfel, die gerendert werden sollen, und sehe sie in einer realistischen 3D-Umgebung.</li>
+                                <li><strong>Dynamische 3D-Steuerung</strong>: Nutze Mausbewegungen oder Tastatureingaben, um die Würfel zu drehen und zu manipulieren.</li>
+                                <li><strong>Interaktive Richtungssteuerung</strong>: Bestimme die Bewegung der Würfel in X- und Y-Richtung.</li>
+                                <li><strong>Anpassbare Rotationsgeschwindigkeit</strong>: Reguliere die Rotationsgeschwindigkeit entlang der Achsen X, Y und Z.</li>
+                                <li><strong>Zufällige Farben</strong>: Aktiviere oder deaktiviere zufällige Farben, um jedem Würfel ein individuelles Aussehen zu verleihen.</li>
+                                <li><strong>Three.js Rendering</strong>: Darstellung der Würfel in einer reinen 3D-Umgebung ohne Schatten, mit klaren und lebendigen Farben.</li>
+                            </ul>
+            
+                            <h3>Ziel des Projekts:</h3>
+                            <p class="card-text">
+                                Das Ziel dieses Projekts ist es, Benutzern eine immersive 3D-Erfahrung zu bieten, bei der sie die vollständige Kontrolle über Darstellung und Bewegung mehrerer Würfel haben. Es kombiniert die Möglichkeiten von <strong>Three.js</strong>, <strong>JavaScript-Events</strong> und <strong>CSS-Transformationen</strong>, um eine visuell ansprechende und interaktive Anwendung zu schaffen.
+                            </p>
+
+                            <a href="cubes.html" class="btn btn-primary">Klicke hier, um das Projekt zu öffnen</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form and Google Maps -->
+        <section id="contact" class="form-card card p-4">
+            <h2>Kontakt</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Ihr Name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Ihre Email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Nachricht</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Ihre Nachricht"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Absenden</button>
+            </form>
+            <h3 class="mt-4">Standort</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d160335.33310245298!2d6.624990328755013!3d51.10403972180861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf338fdcac9759%3A0xf3f710a99ca3351e!2sDormagen!5e0!3m2!1sen!2sde!4v1737402218848!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </section>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./src/index.js"></script>
 </body>
 </html>

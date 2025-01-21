@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Assault</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #controls {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            z-index: 10;
+            max-height: 90%;
+            overflow-y: auto;
+        }
+        .topic {
+            margin-bottom: 15px;
+        }
+        .topic label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .options {
+            margin-left: 20px;
+        }
+        .options input[type="range"],
+        .options input[type="number"],
+        .options input[type="checkbox"] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="src/cubes.js"></script>
+</body>
+</html>
